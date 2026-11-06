@@ -1,0 +1,651 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Raleway:wght@100..900&family=Roboto:wght@100..900&display=swap"
+      rel="stylesheet"
+    />
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/3.0.1/modern-normalize.min.css"
+      integrity="sha512-q6WgHqiHlKyOqslT/lgBgodhd03Wp4BEqKeW6nNtlOY4quzyG3VoQKFrieaCeSnuVseNKRGpGeDU3qPmabCANg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+
+    <link rel="stylesheet" href="./css/main.css" />
+  </head>
+  <body>
+    <header id="header" class="header">
+      <div class="container header-conteiner">
+        <a href="./index.html" class="logo"
+          ><span class="logo-web">Web</span>Studio</a
+        >
+
+        <nav class="header-nav">
+          <ul class="nav-list">
+            <!-- Для текущей страницы (Features) добавляем два класса через пробел -->
+            <li class="nav-item">
+              <a href="#features" class="nav-link current">Features</a>
+            </li>
+            <!-- Обычные ссылки имеют только один класс -->
+            <li class="nav-item"><a href="#team" class="nav-link">Team</a></li>
+            <li class="nav-item">
+              <a href="#portfolio" class="nav-link">Portfolio</a>
+            </li>
+          </ul>
+        </nav>
+
+        <address class="address">
+          <ul class="address-list">
+            <li>
+              <a class="address-link" href="mailto:info@devstudio.com"
+                >info@devstudio.com</a
+              >
+            </li>
+            <li>
+              <a class="address-link" href="tel:+110001111111"
+                >+11 (000) 111-11-11</a
+              >
+            </li>
+          </ul>
+        </address>
+      </div>
+    </header>
+
+    <main id="main" class="main">
+      <section id="hero" class="hero-section">
+        <div class="container">
+          <h1 class="hero-title">Effective Solutions for Your Business</h1>
+          <button type="button" class="hero-btn">Order Service</button>
+        </div>
+      </section>
+
+      <section class="features" id="features">
+        <div class="container">
+          <h2 class="sr-only">Our features</h2>
+
+          <ul class="features-list">
+            <li class="features-item">
+              <!-- Блок-плашка для іконки -->
+              <div class="features-thumb">
+                <svg class="features-icon" width="64" height="64">
+                  <!--для антены-->
+                  <use href="./images/icons.svg#icon-antena"></use>
+                </svg>
+              </div>
+
+              <h3 class="feature-title">Strategy</h3>
+              <p class="feature-text">
+                Our goal is to identify the business problem to walk away with
+                the perfect and creative solution.
+              </p>
+            </li>
+
+            <li class="features-item">
+              <!-- Блок-плашка для іконки -->
+              <div class="features-thumb">
+                <svg class="features-icon" width="64" height="64">
+                  <use href="./images/icons.svg#icon-clock"></use>
+                </svg>
+              </div>
+
+              <h3 class="feature-title">Punctuality</h3>
+              <p class="feature-text">
+                Bring the key message to the brand's audience for the best price
+                within the shortest possible time.
+              </p>
+            </li>
+
+            <li class="features-item">
+              <!-- Блок-плашка для іконки -->
+              <div class="features-thumb">
+                <svg class="features-icon" width="64" height="64">
+                  <use href="./images/icons.svg#icon-diagram"></use>
+                </svg>
+              </div>
+
+              <h3 class="feature-title">Diligence</h3>
+              <p class="feature-text">
+                Research and confirm brands with the strongest digital growth
+                opportunities and minimize risk.
+              </p>
+            </li>
+
+            <li class="features-item">
+              <!-- Блок-плашка для іконки -->
+              <div class="features-thumb">
+                <svg class="features-icon" width="64" height="64">
+                  <use href="./images/icons.svg#icon-astronaut"></use>
+                </svg>
+              </div>
+
+              <h3 class="feature-title">Technologies</h3>
+              <p class="feature-text">
+                Design practice focused on digital experiences. We bring forth a
+                deep passion for problem-solving.
+              </p>
+            </li>
+          </ul>
+        </div>
+      </section>
+
+      <section class="team" id="team">
+        <div class="container">
+          <h2 class="team-title">Our Team</h2>
+
+          <ul class="team-list">
+            <li class="team-item">
+              <img class="team-img"
+                src="./images/team-1.jpg"
+                alt="Mark Guerrero, a smiling man with a beard wearing a light blue shirt"
+                width="264"
+                height="260"
+              />
+              <div class="team-card-content">
+                <h3 class="team-member-name">Mark Guerrero</h3>
+                <p class="team-member-position">Product Designer</p>
+
+                <!-- Вставляємо список соцмереж сюди -->
+                <ul class="socials-list">
+                  <li class="socials-item">
+                    <a href="" class="socials-link">
+                      <svg class="socials-icon" width="16" height="16">
+                        <use href="./images/icons.svg#icon-instagram"></use>
+                      </svg>
+                    </a>
+                  </li>
+                  <li class="socials-item">
+                    <a href="" class="socials-link">
+                      <svg class="socials-icon" width="16" height="16">
+                        <use href="./images/icons.svg#icon-twitter"></use>
+                      </svg>
+                    </a>
+                  </li>
+                  <li class="socials-item">
+                    <a href="" class="socials-link">
+                      <svg class="socials-icon" width="16" height="16">
+                        <use href="./images/icons.svg#icon-facebook"></use>
+                      </svg>
+                    </a>
+                  </li>
+                  <li class="socials-item">
+                    <a href="" class="socials-link">
+                      <svg class="socials-icon" width="16" height="16">
+                        <use href="./images/icons.svg#icon-linkedin"></use>
+                      </svg>
+                    </a>
+                  </li>
+                </ul>
+              </div>
+            </li>
+
+            <li class="team-item">
+              <img class="team-img"
+                src="./images/team-2.jpg"
+                alt="Tom Ford, smiling young man with light stubble, wearing a light blue shirt"
+                width="264"
+                height="260"
+              />
+              <div class="team-card-content">
+                <h3 class="team-member-name">Tom Ford</h3>
+                <p class="team-member-position">Frontend Developer</p>
+
+                <!-- Вставляємо список соцмереж сюди -->
+                <ul class="socials-list">
+                  <li class="socials-item">
+                    <a href="" class="socials-link">
+                      <svg class="socials-icon" width="16" height="16">
+                        <use href="./images/icons.svg#icon-instagram"></use>
+                      </svg>
+                    </a>
+                  </li>
+                  <li class="socials-item">
+                    <a href="" class="socials-link">
+                      <svg class="socials-icon" width="16" height="16">
+                        <use href="./images/icons.svg#icon-twitter"></use>
+                      </svg>
+                    </a>
+                  </li>
+                  <li class="socials-item">
+                    <a href="" class="socials-link">
+                      <svg class="socials-icon" width="16" height="16">
+                        <use href="./images/icons.svg#icon-facebook"></use>
+                      </svg>
+                    </a>
+                  </li>
+                  <li class="socials-item">
+                    <a href="" class="socials-link">
+                      <svg class="socials-icon" width="16" height="16">
+                        <use href="./images/icons.svg#icon-linkedin"></use>
+                      </svg>
+                    </a>
+                  </li>
+                </ul>
+              </div>
+            </li>
+
+            <li class="team-item">
+              <img class="team-img"
+                src="./images/team-3.jpg"
+                alt="Camila Garcia, a brunette woman with long straight hair, a sweet smile, and brown eyes, wearing a pink top"
+                width="264"
+                height="260"
+              />
+              <div class="team-card-content">
+                <h3 class="team-member-name">Camila Garcia</h3>
+                <p class="team-member-position">Marketing</p>
+
+                <!-- Вставляємо список соцмереж сюди -->
+                <ul class="socials-list">
+                  <li class="socials-item">
+                    <a href="" class="socials-link">
+                      <svg class="socials-icon" width="16" height="16">
+                        <use href="./images/icons.svg#icon-instagram"></use>
+                      </svg>
+                    </a>
+                  </li>
+                  <li class="socials-item">
+                    <a href="" class="socials-link">
+                      <svg class="socials-icon" width="16" height="16">
+                        <use href="./images/icons.svg#icon-twitter"></use>
+                      </svg>
+                    </a>
+                  </li>
+                  <li class="socials-item">
+                    <a href="" class="socials-link">
+                      <svg class="socials-icon" width="16" height="16">
+                        <use href="./images/icons.svg#icon-facebook"></use>
+                      </svg>
+                    </a>
+                  </li>
+                  <li class="socials-item">
+                    <a href="" class="socials-link">
+                      <svg class="socials-icon" width="16" height="16">
+                        <use href="./images/icons.svg#icon-linkedin"></use>
+                      </svg>
+                    </a>
+                  </li>
+                </ul>
+              </div>
+            </li>
+
+            <li class="team-item">
+              <img class="team-img"
+                src="./images/team-4.jpg"
+                alt="Daniel Wilson, smiling young man with light stubble, wearing a light gray T-shirt"
+                width="264"
+                height="260"
+              />
+              <div class="team-card-content">
+                <h3 class="team-member-name">Daniel Wilson</h3>
+                <p class="team-member-position">UI Designer</p>
+
+                <!-- Вставляємо список соцмереж сюди -->
+                <ul class="socials-list">
+                  <li class="socials-item">
+                    <a href="" class="socials-link">
+                      <svg class="socials-icon" width="16" height="16">
+                        <use href="./images/icons.svg#icon-instagram"></use>
+                      </svg>
+                    </a>
+                  </li>
+                  <li class="socials-item">
+                    <a href="" class="socials-link">
+                      <svg class="socials-icon" width="16" height="16">
+                        <use href="./images/icons.svg#icon-twitter"></use>
+                      </svg>
+                    </a>
+                  </li>
+                  <li class="socials-item">
+                    <a href="" class="socials-link">
+                      <svg class="socials-icon" width="16" height="16">
+                        <use href="./images/icons.svg#icon-facebook"></use>
+                      </svg>
+                    </a>
+                  </li>
+                  <li class="socials-item">
+                    <a href="" class="socials-link">
+                      <svg class="socials-icon" width="16" height="16">
+                        <use href="./images/icons.svg#icon-linkedin"></use>
+                      </svg>
+                    </a>
+                  </li>
+                </ul>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </section>
+
+      <section class="portfolio" id="portfolio">
+        <div class="container">
+          <h2 class="portfolio-section-title">Our Portfolio</h2>
+
+          <ul class="portfolio-list">
+            <li class="portfolio-item">
+              <!-- 1. Створюємо блочний контейнер для картинки та оверлею -->
+              <div class="portfolio-thumb">
+                <img
+                  src="./images/portfolio-1.jpg"
+                  alt="Banking App, banking application, seven tabs for users"
+                  width="360"
+                  height="300"
+                />
+                <!-- 2. Додаємо елемент оверлею з додатковим текстом -->
+                <p class="portfolio-overlay">
+                  14 Stylish and User-Friendly App Design Concepts · Task
+                  Manager App · Calorie Tracker App · Exotic Fruit Ecommerce App
+                  · Cloud Storage App
+                </p>
+              </div>
+
+              <div class="portfolio-item-content">
+                <h3 class="portfolio-item-title">Banking App</h3>
+                <p class="portfolio-item-description">App</p>
+              </div>
+            </li>
+
+            <li class="portfolio-item">
+              <!-- 1. Створюємо блочний контейнер для картинки та оверлею -->
+              <div class="portfolio-thumb">
+                <img
+                  src="./images/portfolio-2.jpg"
+                  alt="Cashless Payment, ashless payment via a mobile app"
+                  width="360"
+                  height="300"
+                />
+                <!-- 2. Додаємо елемент оверлею з додатковим текстом -->
+                <p class="portfolio-overlay">
+                  14 Stylish and User-Friendly App Design Concepts · Task
+                  Manager App · Calorie Tracker App · Exotic Fruit Ecommerce App
+                  · Cloud Storage App
+                </p>
+              </div>
+
+              <div class="portfolio-item-content">
+                <h3 class="portfolio-item-title">Cashless Payment</h3>
+                <p class="portfolio-item-description">Marketing</p>
+              </div>
+            </li>
+
+            <li class="portfolio-item">
+              <!-- 1. Створюємо блочний контейнер для картинки та оверлею -->
+              <div class="portfolio-thumb">
+                <img
+                  src="./images/portfolio-3.jpg"
+                  alt="Meditation app, an open laptop on a black background"
+                  width="360"
+                  height="300"
+                />
+                <!-- 2. Додаємо елемент оверлею з додатковим текстом -->
+                <p class="portfolio-overlay">
+                  14 Stylish and User-Friendly App Design Concepts · Task
+                  Manager App · Calorie Tracker App · Exotic Fruit Ecommerce App
+                  · Cloud Storage App
+                </p>
+              </div>
+
+              <div class="portfolio-item-content">
+                <h3 class="portfolio-item-title">Meditation App</h3>
+                <p class="portfolio-item-description">App</p>
+              </div>
+            </li>
+
+            <li class="portfolio-item">
+              <!-- 1. Створюємо блочний контейнер для картинки та оверлею -->
+              <div class="portfolio-thumb">
+                <img
+                  src="./images/portfolio-4.jpg"
+                  alt="Taxi Service, taxi service driver"
+                  width="360"
+                  height="300"
+                />
+
+                <!-- 2. Додаємо елемент оверлею з додатковим текстом -->
+                <p class="portfolio-overlay">
+                  14 Stylish and User-Friendly App Design Concepts · Task
+                  Manager App · Calorie Tracker App · Exotic Fruit Ecommerce App
+                  · Cloud Storage App
+                </p>
+              </div>
+
+              <div class="portfolio-item-content">
+                <h3 class="portfolio-item-title">Taxi Service</h3>
+                <p class="portfolio-item-description">Marketing</p>
+              </div>
+            </li>
+
+            <li class="portfolio-item">
+              <!-- 1. Створюємо блочний контейнер для картинки та оверлею -->
+              <div class="portfolio-thumb">
+                <img
+                  src="./images/portfolio-5.jpg"
+                  alt="Screen Illustrations, night-themed illustrations for phone screens"
+                  width="360"
+                  height="300"
+                />
+
+                <!-- 2. Додаємо елемент оверлею з додатковим текстом -->
+                <p class="portfolio-overlay">
+                  14 Stylish and User-Friendly App Design Concepts · Task
+                  Manager App · Calorie Tracker App · Exotic Fruit Ecommerce App
+                  · Cloud Storage App
+                </p>
+              </div>
+
+              <div class="portfolio-item-content">
+                <h3 class="portfolio-item-title">Screen Illustrations</h3>
+                <p class="portfolio-item-description">Design</p>
+              </div>
+            </li>
+
+            <li class="portfolio-item">
+              <!-- 1. Створюємо блочний контейнер для картинки та оверлею -->
+              <div class="portfolio-thumb">
+                <img
+                  src="./images/portfolio-6.jpg"
+                  alt="A smiling young woman in an orange sweater is holding a phone that shows an online course"
+                  width="360"
+                  height="300"
+                />
+
+                <!-- 2. Додаємо елемент оверлею з додатковим текстом -->
+                <p class="portfolio-overlay">
+                  14 Stylish and User-Friendly App Design Concepts · Task
+                  Manager App · Calorie Tracker App · Exotic Fruit Ecommerce App
+                  · Cloud Storage App
+                </p>
+              </div>
+
+              <div class="portfolio-item-content">
+                <h3 class="portfolio-item-title">Online Courses</h3>
+                <p class="portfolio-item-description">Marketing</p>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </section>
+    </main>
+
+    <footer id="footer" class="footer">
+      <!-- 1. Главный контейнер (удерживает контент по центру экрана) -->
+      <div class="container footer-container">
+        <!-- ================= ЛЕВАЯ КОРОБКА ================= -->
+        <div class="footer-left">
+          <!-- Логотип сайта -->
+          <a href="./index.html" class="footer-logo"
+            ><span class="logo-web">Web</span>Studio</a
+          >
+          <!-- Описание под логотипом -->
+          <p class="footer-text">
+            Increase the flow of customers and sales for your business with
+            digital marketing & growth solutions.
+          </p>
+        </div>
+
+        <!-- ================= ПРАВАЯ КОРОБКА ================= -->
+        <div class="footer-socials">
+          <!-- Заголовок блока соцсетей (W 96, H 24 на макете) -->
+          <p class="footer-socials-title">Social media</p>
+
+          <!-- Список из 4 круглых кнопок (W 208, H 40 на макете) -->
+          <ul class="footer-socials-list">
+            <!-- Каждая иконка завернута в свой тег li -->
+            <li class="footer-socials-item">
+              <a href="" class="footer-socials-link">
+                <!-- Сама SVG-картинка (W 24, H 24 по макету футера) -->
+                <svg class="footer-socials-icon" width="24" height="24">
+                  <!-- Подключаем чистую иконку из нашего общего спрайта icons.svg -->
+                  <use href="./images/icons.svg#icon-instagram"></use>
+                </svg>
+              </a>
+            </li>
+            <!-- Каждая иконка завернута в свой тег li -->
+            <li class="footer-socials-item">
+              <a href="" class="footer-socials-link">
+                <!-- Сама SVG-картинка (W 24, H 24 по макету футера) -->
+                <svg class="footer-socials-icon" width="24" height="24">
+                  <!-- Подключаем чистую иконку из нашего общего спрайта icons.svg -->
+                  <use href="./images/icons.svg#icon-twitter"></use>
+                </svg>
+              </a>
+            </li>
+            <!-- Каждая иконка завернута в свой тег li -->
+            <li class="footer-socials-item">
+              <a href="" class="footer-socials-link">
+                <!-- Сама SVG-картинка (W 24, H 24 по макету футера) -->
+                <svg class="footer-socials-icon" width="24" height="24">
+                  <!-- Подключаем чистую иконку из нашего общего спрайта icons.svg -->
+                  <use href="./images/icons.svg#icon-facebook"></use>
+                </svg>
+              </a>
+            </li>
+            <!-- Каждая иконка завернута в свой тег li -->
+            <li class="footer-socials-item">
+              <a href="" class="footer-socials-link">
+                <!-- Сама SVG-картинка (W 24, H 24 по макету футера) -->
+                <svg class="footer-socials-icon" width="24" height="24">
+                  <!-- Подключаем чистую иконку из нашего общего спрайта icons.svg -->
+                  <use href="./images/icons.svg#icon-linkedin"></use>
+                </svg>
+              </a>
+            </li>
+          </ul>
+        </div>
+        
+          <!-- домашка 5 -->
+
+        <div class="subscribe">
+          <p class="subscribe-title">Subscribe</p>
+        
+          <form class="subscribe-form">
+            <input 
+              type="email" 
+              name="user-email" 
+              class="footer-input" 
+              placeholder="E-mail" 
+              required/>
+          
+            <button type="submit" class="button-footer">Subscribe
+              <svg class="subscribe-icon" width="24" height="24">
+                <use href="./images/icons.svg#icon-telegram-f"></use> 
+                
+              </svg>
+            </button>
+          </form>
+        </div>
+
+      </div>
+    </footer>
+
+    <!-- Backdrop — это темная вуаль на весь экран -->
+
+     <!-- Початково клас is-open відсутній, щоб модалка була прихована -->
+    <div class="backdrop" id="modal">
+      <!-- Modal — это само белое окно, которое находится внутри вуали -->
+      <div class="modal">
+        <!-- Сюда на следующих этапах мы добавим кнопку-крестик в верхнем правом углу -->
+
+         <!-- Кнопка-крестик для закрытия -->
+        <button type="button" class="modal-close-btn" data-modal-close>
+          <svg class="modal-close-icon" width="8" height="8">
+            <use href="./images/icons.svg#icon-closed"></use>
+          </svg>
+        </button>
+
+        <!-- Заголовок модального окна -->
+        <p class="modal-title">Leave your contacts and we will call you back</p>
+
+            <!-- Тут буде ваша форма заявки (Form) -->
+          <form class="modal-form">
+            <!-- Поля форми додамо на наступному кроці -->
+
+            <!-- Блок полів форми -->
+            <div class="form-fields">
+                  <!-- Поле Name -->
+              <div class="form-field-wrapper">
+                <label for="user-name" class="form-label">Name</label>
+                <div class="input-wrapper">
+                  <input type="text" name="user-name" id="user-name" class="form-input" required>
+                  <svg class="input-icon" width="18" height="24">
+                    <use href="./images/icons.svg#icon-name"></use>
+                  </svg>
+                </div>
+              </div>
+              <!-- Поле Phone -->
+              <div class="form-field-wrapper">
+                <label for="user-phone" class="form-label">Phone</label>
+                <div class="input-wrapper">
+                  <input type="tel" name="user-phone" id="user-phone" class="form-input" required>
+                  <svg class="input-icon" width="18" height="24">
+                    <use href="./images/icons.svg#icon-phone"></use>
+                  </svg>
+                </div>
+              </div>
+
+              <!-- Поле Email -->
+              <div class="form-field-wrapper">
+                <label for="user-email" class="form-label">Email</label>
+                <div class="input-wrapper">
+                  <input type="email" name="user-email" id="user-email" class="form-input" required>
+                  <svg class="input-icon" width="18" height="24">
+                    <use href="./images/icons.svg#icon-email"></use>
+                  </svg>
+                </div>
+              </div>
+                <!-- Поле Comment (Користувач не може змінювати розмір textarea) -->
+              <div class="form-field-wrapper">
+                <label for="user-comment" class="form-label">Comment</label>
+                <textarea name="user-comment" id="user-comment" class="form-textarea" placeholder="Text input"></textarea>
+              </div>
+            </div>
+
+             <!-- Блок згоди (Agreement) -->
+            <div class="form-agreement-wrapper">
+              <input type="checkbox" name="user-privacy" id="privacy-policy" class="form-checkbox visually-hidden" value="true" required>
+              <label for="privacy-policy" class="checkbox-label">
+                <span class="custom-checkbox">
+                  <svg class="checkbox-icon" width="10" height="8">
+                    <use href="./images/icons.svg#icon-Checkbox"></use>
+                  </svg>
+                </span>
+                I accept the terms and conditions of the <a href="#" class="privacy-link">Privacy Policy</a>
+              </label>
+            </div>
+             <!-- Кнопка відправки (Кнопкам «відправлення» форм заданий атрибут type="submit") -->
+            <button type="submit" class="form-submit-btn">Send</button>
+
+          </form>
+      </div>
+    </div>
+
+  </body>
+</html>

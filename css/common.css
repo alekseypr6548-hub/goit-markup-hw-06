@@ -1,0 +1,54 @@
+body {
+    font-family: Roboto, sans-serif;
+    color: #434455;
+    background-color: #fff
+}
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding-left: 0;
+}
+
+a {
+    text-decoration: none;
+}
+
+h1,h2,h3,p {
+    margin: 0;
+}
+
+.sr-only {
+    position: absolute;
+    white-space: nowrap;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    border: 0;
+    padding: 0;
+    clip: rect(0 0 0 0);
+    clip-path: inset(100%);
+    margin: -1px;
+}
+
+
+.container {
+/* Робоча область 12 колонок по 72px + 11 проміжків між ними */
+    max-width: 1158px;/* Ограничивает ширину */
+    padding: 0 15px;/* Центрирует всю коробку по центру экрана */
+    margin: 0 auto;/* Безопасные отступы по бокам */
+
+/* Дозволяє контейнеру стискатися на маленьких екранах */
+    width: 100%;
+
+/* Автоматично центрує весь макет по горизонталі на моніторі */
+    margin-right: auto;
+    margin-left: auto;
+
+/* Безпечні відступи по боках, щоб контент не притискався до країв екрана на телефонах */
+    padding-right: 15px;
+    padding-left: 15px;
+
+/* Падінги не збільшують загальну ширину контейнера */
+    box-sizing: border-box;
+}

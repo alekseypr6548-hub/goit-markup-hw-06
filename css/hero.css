@@ -1,0 +1,75 @@
+/* Стилі для всієї секції Hero */
+.hero-section {
+    background-color: #2E2F42;
+
+    /* --- ДОДАЙТЕ ЦІ РЯДКИ СЮДИ --- */
+    padding: 188px 0;
+
+    /* Задаємо висоту секції з макета (Layout: H 600) */
+        max-width: 1440px;
+        height: 600px;
+        margin-left: auto;
+        margin-right: auto;
+    
+        /* Об'єднуємо градієнт та картинку */
+        background-image: linear-gradient(rgba(46, 47, 66, 0.7),rgba(46, 47, 66, 0.7)),
+        /* Верхня точка градієнта */ /* Нижня точка градієнта */
+        url('../images/hero-bg.jpg');
+        /* Шлях до вашої картинки */
+    
+        /* Центруємо та масштабуємо фон */
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+}
+
+/* Стилі для тексту заголовка */
+.hero-title {
+    font-weight: 700;
+    font-size: 56px;
+    line-height: 1.07143;
+    letter-spacing: 0.02em;
+    text-align: center;
+    color: #FFFFFF;
+
+    /* --- ДОДАЙТЕ ЦІ РЯДКИ СЮДИ --- */
+    max-width: 496px;
+    margin: 0 auto 48px;
+    /* 0 px відступ зверху, auto центрує кнопку ліворуч/праворуч, та до низу до кнопки 48px*/
+}
+
+/*поточні стилі типографіки та кольору */
+.hero-btn {
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 1.5;
+    letter-spacing: 0.04em;
+    color: #FFFFFF;
+    background: #4D5AE5;
+    cursor: pointer;
+
+/* --- ДОДАЙТЕ ЦІ РЯДКИ СЮДИ --- */
+    padding: 16px 32px;
+
+    display: block;
+     /* Робить кнопку блоком, щоб спрацювало центрування */
+   
+    border: none;
+    /* Прибирає стандартну чорну рамку браузера */
+    border-radius: 4px;
+    /* Скруглення кутів рамки */
+    margin: 0 auto 0;
+    /* 0px відступ зверху від h1, auto центрує кнопку ліворуч/праворуч, та до низу 0*/
+    
+    /* Добавляем тень */
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+
+    /* Добавляем плавность изменения цвета */
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Стилі для кнопки при наведенні мишкою та фокусі */
+.hero-btn:hover,
+.hero-btn:focus {
+    background-color: #404BBF;
+}

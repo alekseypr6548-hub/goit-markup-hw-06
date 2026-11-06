@@ -1,0 +1,255 @@
+/* --- БЕКДРОП И КОРОБКА --- */
+/* Напівпрозорий темний фон на весь екран */
+.backdrop {
+    position: fixed;
+    /* Фиксируем вуаль на экране, она не будет двигаться при скролле */
+    top: 0;
+    left: 0;
+    width: 100%;
+    /* Растягиваем блок на всю ширину экрана */
+    height: 100%;
+    /* Растягиваем на всю высоту экрана */
+    background-color: rgba(46, 47, 66, 0.4);
+    /* Цвет Navy Blue Modal (46, 47, 66) с прозрачностью 40% */
+
+    /* Початково прихований */
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+     /* Плавний перехід появи */
+    transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1),
+            visibility 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Клас, який робить бекдроп та модалку видимими */
+.backdrop.is-open {
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+}
+
+.modal {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); /* Ідеальне центрування */
+
+    /* Тимчасові розміри (підкоригуйте під точні розміри білого прямокутника) */
+    width: 408px;
+    min-height: 584px;
+    background-color: #FCFCFC;
+    border-radius: 4px;
+    box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.14),
+        0px 1px 3px rgba(0, 0, 0, 0.12),
+        0px 2px 1px rgba(0, 0, 0, 0.2);
+    /* Паддинг сверху 72px оставляет место под кнопку-крестик */
+    padding: 72px 24px 24px 24px;
+}
+
+/* --- КНОПКА ЗАКРЫТИЯ (КРЕСТИК) --- */
+.modal-close-btn {
+    position: absolute;
+    top: 24px;
+    right: 24px;
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #E7E9FC;
+    border: 1px solid rgba(46, 47, 66, 0.4);
+    padding: 0;
+    cursor: pointer;
+
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+            border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Додаємо стилі для hover та focus кнопки */
+.modal-close-btn:hover,
+.modal-close-btn:focus {
+    background-color: #404bbf;
+    /* Колір акценту при наведенні */
+    border-color: transparent;
+}
+
+/*Додавання стилів для іконки закриття*/
+/* Базовий стан іконки всередині кнопки */
+.modal-close-icon {
+    fill: #2e2f42;
+    /* Явно заданий колір з макета */
+    transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Зміна кольору іконки при ховері/фокусі на саму кнопку */
+.modal-close-btn:hover .modal-close-icon,
+.modal-close-btn:focus .modal-close-icon {
+    fill: #ffffff;
+}
+
+.modal-title {
+    /* Додайте цей селектор, якщо клас збігається, або використайте ваш клас для цього тексту */
+    margin-bottom: 16px;
+}
+
+/* Контейнер полів форми з відступами 24px (згідно з Gap 24 у Figma) */
+.form-fields {
+    display: flex;
+    flex-direction: column;
+    /*1. Вертикальні відступи між полями (Name-Phone, Phone-Email, Email-Comment)*/
+    gap: 8px;
+    margin-bottom: 16px;
+    width: 100%;
+}
+.form-field-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    /* Відступ між лейблом та інпутом */
+}
+.form-label {
+    font-size: 12px;
+    line-height: 1.17;
+    letter-spacing: 0.04em;
+    color: #8e8f99;
+    /* Колір LIGHT SLATE */
+}
+.input-wrapper {
+    position: relative;
+}
+.form-input {
+    /* Ваші поточні стилі (ширина, висота, бордер тощо) */
+    width: 100%;
+    height: 40px;
+    border: 1px solid rgba(46, 47, 66, 0.4);
+    border-radius: 4px;
+    padding-left: 38px;
+    /* Місце для іконки зліва */
+    outline: transparent;
+
+    background-color: transparent;
+        /* або #fcfcfc, щоб зливалося з модалкою */
+    line-height: 1.5;
+        /* Додано */
+    letter-spacing: 0.02em;
+/* Додаємо transition для border-color та color (для іконки) */
+    transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.form-input:focus {
+    border-color: #4d5ae5;
+    /* Колір IRIS */
+}
+/* Іконки всередині інпуту спозиціоновані по вертикалі - по центру */
+.input-icon {
+    position: absolute;
+    left: 16px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #2e2f42;
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.form-input:focus+.input-icon {
+    color: #4d5ae5;
+}
+/* Текстове поле має бути з фіксованим розміром (ТЗ) */
+.form-textarea {
+    width: 100%;
+    height: 120px;
+    font-size: 12px;
+    line-height: 1.17;
+    letter-spacing: 0.04em;
+    border: 1px solid rgba(46, 47, 66, 0.4);
+    border-radius: 4px;
+    padding: 8px 16px;
+    outline: transparent;
+    resize: none;
+    /* Заборона зміни розміру користувачем */
+    transition: border-color 250ms cubic-bezier(0.4, 0, 0, 1);
+}
+.form-textarea:focus {
+    border-color: #4d5ae5;
+}
+.form-textarea::placeholder {
+    color: rgba(46, 47, 66, 0.4);
+}
+/* Стилізація кастомного чекбокса */
+.form-agreement-wrapper {
+    margin-bottom: 24px;
+}
+.checkbox-label {
+    font-size: 12px;
+    line-height: 1.17;
+    letter-spacing: 0.04em;
+    color: #8e8f99;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+/* 1. Базовий стан кастомного квадратика, коли чекбокс НЕ вибрано */
+.custom-checkbox {
+    width: 16px;
+    height: 16px;
+    border: 1px solid rgba(46, 47, 66, 0.4);
+    border-radius: 2px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    /* Змінюємо колір для currentColor іконки всередині */
+    color: transparent; /* Робимо галочку невидимою за замовчуванням */
+
+    /* Додаємо плавний перехід для фону, бордера та кольору іконки */
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+        border-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+        color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+/* 2. Стан, коли чекбокс ВИБРАНО (:checked) */
+.form-checkbox:checked+.checkbox-label .custom-checkbox {
+    background-color: #404bbf;
+    border-color: #404bbf;
+    color: #f4f4fd;/* Тепер галочка стає видимою і набуває кольору #f4f4fd */
+}
+.privacy-link {
+    color: #4d5ae5;
+    text-decoration: underline;
+}
+/* Кнопка відправки форми */
+.form-submit-btn {
+    display: block;
+    min-width: 169px;
+    height: 56px;
+    margin: 0 auto;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 1.5;
+    letter-spacing: 0.04em;
+    color: #ffffff;
+    background-color: #4d5ae5;
+    /* Колір IRIS з макета */
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0, 1);
+
+    /*тіні у кнопки відправки*/
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.15);
+
+}
+.form-submit-btn:hover,
+.form-submit-btn:focus {
+    background-color: #404bbf;
+}
+/* Утилітарний клас для приховування нативного чекбокса */
+.visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    border: 0;
+    padding: 0;
+    white-space: nowrap;
+    clip-path: inset(100%);
+    clip: rect(0 0 0 0);
+    overflow: hidden;
+}
