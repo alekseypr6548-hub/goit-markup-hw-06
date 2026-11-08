@@ -24,11 +24,11 @@
   </head>
   <body>
     <header id="header" class="header">
-      <div class="container header-conteiner">
-        <a href="./index.html" class="logo"
-          ><span class="logo-web">Web</span>Studio</a
-        >
+      <div class="container header-container">
+<!-- Логотип (задає висоту шапки) (зліва) -->
+        <a href="./index.html" class="logo"><span class="logo-web">Web</span>Studio</a>
 
+<!-- Меню навігації (приховане на мобільних, видиме на планшеті/десктопі) -->
         <nav class="header-nav">
           <ul class="nav-list">
             <!-- Для текущей страницы (Features) добавляем два класса через пробел -->
@@ -42,7 +42,7 @@
             </li>
           </ul>
         </nav>
-
+ <!-- Контакти (приховані на мобільних, видимі на планшеті/десктопі) -->
         <address class="address">
           <ul class="address-list">
             <li>
@@ -57,10 +57,51 @@
             </li>
           </ul>
         </address>
+
+<!-- Mobile STYLES мобільний контейнер-->
+<!-- Кнопка бургер-меню (тепер вона всередині і буде справа) -->
+        <button type="button" class="burger-btn">
+          <svg class="burger-icon" width="24" height="24">
+            <use href="./images/icons.svg#icon-burger-menu"></use>
+          </svg>
+        </button>
+
+
+        <!-- Мобільне меню 
+        <div class="menu-container js-menu-container" id="mobile-menu">
+          <button class="menu-close-btn js-close-menu" type="button">
+            ===Сюди вставте іконку хрестика з вашого icons.svg===================================================
+            <svg width="8" height="8"><use href="./images/icons.svg#icon-close"></use></svg>
+          </button>
+
+          <nav class="mobile-nav">
+            <ul class="mobile-nav-list">
+              <li><a href="./index.html" class="mobile-nav-link current">Features</a></li>
+              <li><a href="" class="mobile-nav-link">Team</a></li>
+              <li><a href="" class="mobile-nav-link">Portfolio</a></li>
+            </ul>
+          </nav>
+
+          <div class="mobile-menu-contacts">
+            <address class="mobile-address">
+              <ul class="mobile-contacts-list">
+                <li><a href="tel:+110001111111" class="mobile-phone">+11 (000) 111-11-11</a></li>
+                <li><a href="mailto:info@devstudio.com" class="mobile-email">info@devstudio.com</a></li>
+              </ul>
+            </address>
+
+            ===Соцмережі внизу меню===============================================================================
+            <ul class="mobile-socials-list">
+            ===Повторіть li з іконками для Instagram, Twitter(X), Facebook, LinkedIn==============================
+            </ul>
+          </div>
+        </div>-->
+        
       </div>
     </header>
 
     <main id="main" class="main">
+
       <section id="hero" class="hero-section">
         <div class="container">
           <h1 class="hero-title">Effective Solutions for Your Business</h1>

@@ -1,0 +1,83 @@
+.features-section-title {
+    color: #2e2f42;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 1.11;
+    letter-spacing: 0.02em;
+    text-align: center;
+}
+
+.feature-title {
+    color: #2e2f42;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 1.2;
+    letter-spacing: 0.02em;
+}
+
+.feature-text{
+    color: #434455;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 1.5;
+    letter-spacing: 0.02em;
+}
+
+.features-section-title {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+}
+
+.features {
+    padding: 120px 0;
+}
+
+.features-list {
+    display: flex;
+    gap: 24px;
+}
+
+.features-item {
+    width: 264px;
+}
+
+.feature-title {
+    margin-bottom: 8px;
+}
+
+.features-thumb {
+    display: flex;
+    align-items: center;
+    /* Центрує іконку по вертикалі */
+    justify-content: center;
+    /* Центрує іконку по горизонталі */
+
+    width: 264px;
+    height: 112px;
+    background-color: rgba(244, 244, 253, 1);
+    /* Світлий колір CLOUD з макета */
+    border-radius: 4px;
+    /* Скруглення кутів із розділу Appearance */
+
+    /* Відступ знизу від плашки до заголовка Strategy (виміряйте в макеті, зазвичай 8px) */
+    margin-bottom: 8px;
+
+    /* ОСЬ ЦЕЙ РЯДОК ПОТРІБНО ДОДАТИ: */
+    /* ... ваши текущие стили (ширина, высота, флексы) ... */
+    border: 1px solid #8E8F99;
+}
+
+/* Стилі для самої SVG-іконки всередині плашки */
+.features-icon {
+    /* Розміри іконки беремо з макета (64px на 64px) */
+    width: 64px;
+    height: 64px;
+}

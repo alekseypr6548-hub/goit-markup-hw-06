@@ -1,22 +1,11 @@
-.header {
-    border-bottom: 1px solid #e7e9fc;
+.header-container {
+    display: flex;/*все элемнети в ряд*/
+    justify-content: space-between;/*распололжение элемента на всю ширину всех элеиентов*/
+    align-items: center;/*на одном уровне*/
 }
 
-.header-conteiner {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-.nav-list {
-    display: flex;
-    gap: 40px;
-}
-
-.contacts-list {
-/* Горизонтальный интервал между контактами */
-    display: flex;
-    gap: 40px;
+.header-nav {
+    display: none;
 }
 
 .logo {
@@ -27,79 +16,131 @@
     letter-spacing: 0.03em;
     text-transform: uppercase;
     color: #2e2f42;
-    margin-right: 76px;
+    
 }
 
 .logo-web {
     color: #4D5AE5;
 }
-
-.nav-link {
-    font-weight: 500;
-    font-size: 16px;
-    line-height: 1.5;
-    letter-spacing: 0.02em;
-    color: #2E2F42; /* Початковий темний колір */
-/* Вертикальные отступы навигационных ссылок */
-    display: block;
-    padding: 24px 0;/* Задает высоту хедера 72px (24 сверху + 24 снизу + высота текста) */
-
-    position: relative;
-        /* ОСЬ ЦЕЙ РЯДОК ОБОВ'ЯЗКОВИЙ */
-
-    /* Наш плавний перехід для кольору: */
-    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-/* Зміна кольору тексту для активної сторінки */
-.nav-link.current {
-    color: #404bbf;
-    /* Колір Ocean з вашого макета */
-}
-
-/* Створення декоративної лінії */
-.nav-link.current::after {
-    content: "";
-    /* 1. Обязательный паспорт! Без него браузер вообще проигнорирует элемент */
-    position: absolute;/* 2. Режим свободного полета. Отрываем линию от текста */
-    /* 3. Координаты «якоря» (прижимаем к левому нижнему углу) */
-    left: 0;
-    bottom: 0;
-    /* Притискає лінію суворо до нижнього краю посилання */
-/* 4. Геометрия из Figma и вашего ТЗ */
-    width: 100%;
-    /* Розтягує лінію на всю ширину тексту (як шар Decor) */
-    height: 4px;
-    /* Висота лінії за ТЗ */
-    background-color: #404bbf;
-    /* Колір лінії Ocean */
-    border-radius: 2px;
-    /* Скруглення кутів лінії за ТЗ */
-}
-
-
-.address-link {
-    color: #434455;/* Початковий сірий колір */
-    font-family: 'Roboto', sans-serif;
-    font-weight: 400;
-    font-size: 16px;
-    line-height: 1.5;
-    letter-spacing: 0.02em;
-
-    /* ДОДАЙТЕ ЦЕЙ РЯДОК: */
-    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-}
-/* Стан при наведенні*/
-.nav-link:hover, .nav-link:focus, .address-link:hover,
-.address-link:focus {
-    color: #404BBF;
-}
 .address {
-    margin-left: auto;
-    font-style: normal;
+    display: none;
 }
-
-.address-list {
+.burger-btn {
     display: flex;
-    gap: 40px;
+        align-items: center;
+        justify-content: center;
+        
+        width: 24px;
+        height: 24px;
+
+        border: none;
+        background-color: transparent;
+        padding: 0;
+    }
+
+@media screen and (min-width:768px) {
+    .header {
+            border-bottom: 1px solid #e7e9fc;
+        }
+    .header-nav {
+            display: block;
+        }
+     .logo {
+        margin-right: 120px;
+     }
+         .nav-list {
+             display: flex;/*элементы в доль горизонт.оси х*/
+             gap: 40px;
+         }
+        .nav-link {
+            font-weight: 500;
+            font-size: 16px;
+            line-height: 1.5;
+            letter-spacing: 0.02em;
+            color: #2E2F42;
+            /* Початковий темний колір */
+            /* Вертикальные отступы навигационных ссылок */
+            display: block;
+            padding: 24px 0;
+            /* Задает высоту хедера 72px (24 сверху + 24 снизу + высота текста) */
+    
+            position: relative;
+            /* ОСЬ ЦЕЙ РЯДОК ОБОВ'ЯЗКОВИЙ */
+    
+            /* АНИМАЦИЯ . Наш плавний перехід для кольору: */
+            transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1); /*от дизайнера*/
+        }
+    
+        /* Зміна кольору тексту для активної сторінки */
+        .nav-link.current {
+            color: #404bbf;
+            /* Колір Ocean з вашого макета */
+        }
+        /* Створення декоративної лінії */
+        .nav-link.current::after {
+            content: "";
+            /* 1. Обязательный паспорт! Без него браузер вообще проигнорирует элемент */
+            position: absolute;
+            /* 2. Режим свободного полета. Отрываем линию от текста */
+            /* 3. Координаты «якоря» (прижимаем к левому нижнему углу) */
+            left: 0;
+            bottom: 0;
+            /* Притискає лінію суворо до нижнього краю посилання */
+            /* 4. Геометрия из Figma и вашего ТЗ */
+            width: 100%;
+            /* Розтягує лінію на всю ширину тексту (як шар Decor) */
+            height: 4px;
+            /* Висота лінії за ТЗ */
+            background-color: #404bbf;
+            /* Колір лінії Ocean */
+            border-radius: 2px;
+            /* Скруглення кутів лінії за ТЗ */
+        }
+        /* Стан при наведенні*/
+        .nav-link:hover,
+        .nav-link:focus,
+        .address-link:hover,
+        .address-link:focus {
+            color: #404BBF;
+        }
+        .address {
+            display: block;
+    
+            margin-left: auto;
+            font-style: normal;
+            /*ссылки не под наклоном*/
+        }
+        .address-link {
+            color: #434455;
+            /* Початковий сірий колір */
+            font-family: 'Roboto', sans-serif;
+            font-weight: 400;
+            font-size: 12px;
+            line-height: 1.16667;
+            letter-spacing: 0.04em;
+    
+            /* ДОДАЙТЕ ЦЕЙ РЯДОК: */
+            transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+            display: block;
+            padding: 6px 0;
+        }  
+    .burger-btn {
+        display: none;
+    }
+}
+@media screen and (min-width:1158px){
+    .logo {
+    margin-right: 76px;
+    }
+    .address-list {
+        display: flex;
+        gap: 40px;
+    }
+    .address-link {
+        font-size: 16px;
+        line-height: 1.5;
+        letter-spacing: 0.02em;
+
+        padding: 24px 0;
+    }
 }
