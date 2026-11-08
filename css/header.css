@@ -37,7 +37,7 @@
         background-color: transparent;
         padding: 0;
     }
-
+/* ================= TABLET STYLES (от 768px до 1157px) ================= */
 @media screen and (min-width:768px) {
     .header {
             border-bottom: 1px solid #e7e9fc;
@@ -46,7 +46,7 @@
             display: block;
         }
      .logo {
-        margin-right: 120px;
+        margin-right: 120px;/* Отступ до навигации по макету */
      }
          .nav-list {
              display: flex;/*элементы в доль горизонт.оси х*/
@@ -128,6 +128,7 @@
         display: none;
     }
 }
+/* ================= DESKTOP STYLES (от 1158px) ================= */
 @media screen and (min-width:1158px){
     .logo {
     margin-right: 76px;

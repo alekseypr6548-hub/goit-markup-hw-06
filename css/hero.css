@@ -1,9 +1,94 @@
+/* ================= MOBILE STYLES (до 767px) ================= */
+.hero-section {
+    background-color: #2e2f42;
+    /* Переменная var(--navy-blue) из Figma */
+    padding: 72px 0;
+    /* Внутренние отступы строго из Box Model мобилки */
+    max-width: 1440px;
+    margin-left: auto;
+    margin-right: auto;
 
-
-@media screen and (min-width:768px) {
-
+    /* Объединение градиента с прозрачностью 0.7 и мобильного фона */
+    background-image: linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)),
+        url('../images/hero-bg-mobile.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
 }
 
-@media screen and (min-width:1158px){
+.hero-title {
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 1.11;
+    letter-spacing: 0.02em;
+    text-align: center;
+    color: #ffffff;
+    max-width: 320px;
+    /* Ограничение ширины текста из мобильного макета */
+    margin: 0 auto 72px;
+    /* Авто-центрирование по горизонтали и отступ 72px до кнопки */
+}
+
+.hero-btn {
+    display: block;
+    /* Превращаем в блок для центрирования с помощью margin */
+    padding: 16px 32px;
+    margin: 0 auto;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 1.5;
+    letter-spacing: 0.04em;
+    color: #ffffff;
+    background-color: #4d5ae5;
+    /* Фирменный синий цвет из Figma */
+    cursor: pointer;
+    border: none;
+    border-radius: 4px;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+
+    /* Плавный переход цвета при наведении за 250ms по ТЗ GoIT */
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.hero-btn:hover,
+.hero-btn:focus {
+    background-color: #404bbf;
+    /* Цвет Ocean при наведении */
+}
+
+/* ================= TABLET STYLES (от 768px до 1157px) ================= */
+@media screen and (min-width:768px) {
+    .hero-section {
+            padding: 112px 0;
+            /* Отступы увеличиваются до 112px согласно Box Model планшета */
+            background-image: linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)),
+                url('../images/hero-bg-tablet.jpg');
+            /* Подгружаем планшетный фон */
+        }
     
+        .hero-title {
+            max-width: 496px;
+            /* Текст становится шире и переносится в 3 строки */
+            margin-bottom: 36px;
+            /* Отступ до кнопки уменьшается до 36px по макету */
+        }
+    }
+
+/* ================= DESKTOP STYLES (от 1158px) ================= */
+@media screen and (min-width:1158px){
+.hero-section {
+        padding: 188px 0;
+        /* Максимальные отступы по 188px из десктопного Box Model */
+        background-image: linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)),
+            url('../images/hero-bg.jpg');
+        /* Десктопный файл фонового изображения */
+    }
+
+    .hero-title {
+        font-size: 56px;
+        /* Размер шрифта увеличивается до десктопного из вашего старого кода */
+        line-height: 1.07;
+        margin-bottom: 48px;
+        /* Отступ до кнопки на десктопе становится 48px */
+    }
 }
