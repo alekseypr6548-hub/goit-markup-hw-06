@@ -665,40 +665,111 @@
           </form>
       </div>
     </div>
-<div class="mobile-menu" id="mobile-menu">
 
-  <!-- Мобільне меню -->
-        <div class="menu-container js-menu-container">
-          <button class="menu-close-btn js-close-menu" type="button">
-            ===Сюди вставте іконку хрестика з вашого icons.svg===================================================
-            <svg width="8" height="8"><use href="./images/icons.svg#icon-close"></use></svg>
-          </button>
+    <!-- Mobile menu -->
+    <div class="mobile-menu" id="mobile-menu">
+      <div class="container mobile-menu-container">
+        <button
+          class="mobile-menu-close-btn"
+          type="button"
+          aria-label="Close mobile menu"
+        >
+          <svg
+            class="mobile-menu-close-icon"
+            width="8"
+            height="8"
+            aria-hidden="true"
+          >
+            <use href="./images/icons.svg#icon-close"></use>
+          </svg>
+        </button>
 
-          <nav class="mobile-nav">
-            <ul class="mobile-nav-list">
-              <li><a href="./index.html" class="mobile-nav-link current">Features</a></li>
-              <li><a href="" class="mobile-nav-link">Team</a></li>
-              <li><a href="" class="mobile-nav-link">Portfolio</a></li>
+        <nav class="mobile-menu-nav" aria-label="Mobile navigation">
+          <ul class="mobile-menu-list">
+            <li>
+              <a class="mobile-menu-link" href="#features">Features</a>
+            </li>
+            <li>
+              <a class="mobile-menu-link" href="#team">Team</a>
+            </li>
+            <li>
+              <a class="mobile-menu-link" href="#portfolio">Portfolio</a>
+            </li>
+          </ul>
+        </nav>
+
+        <div class="mobile-menu-bottom">
+          <address class="mobile-menu-address">
+            <ul class="mobile-menu-address-list">
+              <li>
+                <a class="mobile-menu-phone" href="tel:+110001111111">
+                  +11 (000) 111-11-11
+                </a>
+              </li>
+              <li>
+                <a class="mobile-menu-email" href="mailto:info@devstudio.com">
+                  info@devstudio.com
+                </a>
+              </li>
             </ul>
-          </nav>
+          </address>
 
-          <div class="mobile-menu-contacts">
-            <address class="mobile-address">
-              <ul class="mobile-contacts-list">
-                <li><a href="tel:+110001111111" class="mobile-phone">+11 (000) 111-11-11</a></li>
-                <li><a href="mailto:info@devstudio.com" class="mobile-email">info@devstudio.com</a></li>
-              </ul>
-            </address>
-
-            ===Соцмережі внизу меню===============================================================================
-            <ul class="mobile-socials-list">
-            ===Повторіть li з іконками для Instagram, Twitter(X), Facebook, LinkedIn==============================
-            </ul>
-          </div>
+          <ul class="mobile-menu-social-list">
+            <li class="mobile-menu-social-item">
+              <a
+                class="mobile-menu-social-link"
+                href="https://www.instagram.com/"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Instagram"
+              >
+                <svg width="24" height="24" aria-hidden="true">
+                  <use href="./images/icons.svg#icon-instagram"></use>
+                </svg>
+              </a>
+            </li>
+            <li class="mobile-menu-social-item">
+              <a
+                class="mobile-menu-social-link"
+                href="https://twitter.com/"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Twitter"
+              >
+                <svg width="24" height="24" aria-hidden="true">
+                  <use href="./images/icons.svg#icon-twitter"></use>
+                </svg>
+              </a>
+            </li>
+            <li class="mobile-menu-social-item">
+              <a
+                class="mobile-menu-social-link"
+                href="https://www.facebook.com/"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Facebook"
+              >
+                <svg width="24" height="24" aria-hidden="true">
+                  <use href="./images/icons.svg#icon-facebook"></use>
+                </svg>
+              </a>
+            </li>
+            <li class="mobile-menu-social-item">
+              <a
+                class="mobile-menu-social-link"
+                href="https://www.linkedin.com/"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="LinkedIn"
+              >
+                <svg width="24" height="24" aria-hidden="true">
+                  <use href="./images/icons.svg#icon-linkedin"></use>
+                </svg>
+              </a>
+            </li>
+          </ul>
         </div>
-
-
-
-</div>
+      </div>
+    </div>
   </body>
 </html>
