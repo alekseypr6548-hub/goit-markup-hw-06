@@ -1,0 +1,25 @@
+.mobile-menu {
+        position: fixed;
+            /* Фиксируем вуаль на экране, она не будет двигаться при скролле */
+            top: 0;
+            left: 0;
+            width: 100%;
+            /* Растягиваем блок на всю ширину экрана */
+            height: 100%;
+            /* Растягиваем на всю высоту экрана */
+            background-color: #fff;
+        
+            /* Початково прихований */
+            opacity: 0;
+            visibility: hidden;
+            pointer-events: none;
+            /* Плавний перехід появи */
+            transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1),
+                visibility 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+/* Клас, який робить бекдроп та модалку видимими */
+.mobile-menu.is-open {
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+}
