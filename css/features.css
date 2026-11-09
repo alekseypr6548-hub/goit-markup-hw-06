@@ -1,9 +1,86 @@
+.features {
+    padding: 96px 0;
+}
+.features-list {
+    display: flex;/*ключение режима Flexbox для контейнера*/
+    row-gap: 72px;/*задает фиксированное расстояние*/
+    flex-wrap: wrap;/*позволяет элементам переноситься на следующую строчку.*/
+}
+.features-item {
+    width: 100%;/*отменяет перенос элементов и выстраивает их вертикально*/
+}
+.features-thumb {
+    display: none;/*полностью скрывает элемент со страницы .*/
+}
+.feature-title {
+    margin-bottom: 8px;
+    font-weight: 700;
+    font-size: 36px;
+    
+    line-height: 1.11111;
+    letter-spacing: 0.02em;
+    text-align: center;
+    color: #2e2f42;
+}
+.feature-text {
+    color: #434455;
+    
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 1.5;
+    letter-spacing: 0.02em;
+}
 
 
 @media screen and (min-width:768px) {
-    
+.features-list {
+        column-gap: 24px;/*задает фиксированное расстояние в 24 пикселя между колонками (по горизонтали)*/
+    }
+    .features-item {
+        width: calc((100% - 24px) / 2);/*создает идеальную сетку на две ровные колонки в одну строку*/
+        }
+    .feature-title {
+        text-align: left;/*выравнивает весь текст и инлайновые элементы внутри карт по левому краю*/
+        }
 }
 
 @media screen and (min-width:1158px) {
+    .features {
+            padding: 120px 0;/*добавляет большие внутренние отступы (по 120 пикселей) сверху и снизу*/
+        }
+        .features-list {
+            gap: 24px;/*Горизонтальное пространство между двумя картами равно 24p*/
+        }
+         .features-item {
+             width: calc((100% - 72px) / 4);/*мгновенно перестраивает вашу сетку на 4 уровня колонки в одну строку*/
+         }
+        .features-thumb {
+            display: flex;
+            align-items: center;
+            /* Центрує іконку по вертикалі */
+            justify-content: center;
+            /* Центрує іконку по горизонталі */
+
+            height: 112px;
+            background-color: rgba(244, 244, 253, 1);
+            /* Світлий колір CLOUD з макета */
+            border-radius: 4px;
+            /* Скруглення кутів із розділу Appearance */
+    
+            /* Відступ знизу від плашки до заголовка Strategy (виміряйте в макеті, зазвичай 8px) */
+            margin-bottom: 8px;
+    
+            /* ОСЬ ЦЕЙ РЯДОК ПОТРІБНО ДОДАТИ: */
+            /* ... ваши текущие стили (ширина, высота, флексы) ... */
+            border: 1px solid #8E8F99;
+        }
+         .feature-title {
+            font-size: 20px;/*устанавливает физический размер букв*/
+            font-weight: 500;/*задает полужирный начерт (Medium)*/
+            line-height: 1.2;/*Определяет межстрочный интервал (высоту строки)*/
+        }
+        .feature-description {
+            font-weight: 400;/*устанавливает обычное (нормальное) начертание текста*/
+        }
 
 }
