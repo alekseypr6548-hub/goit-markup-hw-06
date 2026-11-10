@@ -3,12 +3,15 @@
 .backdrop {
     position: fixed;
     /* Фиксируем вуаль на экране, она не будет двигаться при скролле */
-    top: 0;
-    left: 0;
-    width: 100%;
-    /* Растягиваем блок на всю ширину экрана */
-    height: 100%;
-    /* Растягиваем на всю высоту экрана */
+    
+    inset: 0;
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 16px;
+    overflow-y: auto;
+
     background-color: rgba(46, 47, 66, 0.4);
     /* Цвет Navy Blue Modal (46, 47, 66) с прозрачностью 40% */
 
@@ -29,21 +32,21 @@
 }
 
 .modal {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%); /* Ідеальне центрування */
+    position: relative;
+
+    max-width: 100%;
+    margin: auto;
 
     /* Тимчасові розміри (підкоригуйте під точні розміри білого прямокутника) */
     width: 408px;
-    min-height: 584px;
+    min-height: 623px;
     background-color: #FCFCFC;
     border-radius: 4px;
     box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.14),
         0px 1px 3px rgba(0, 0, 0, 0.12),
         0px 2px 1px rgba(0, 0, 0, 0.2);
     /* Паддинг сверху 72px оставляет место под кнопку-крестик */
-    padding: 72px 24px 24px 24px;
+    padding: 72px 16px 24px;
 }
 
 /* --- КНОПКА ЗАКРЫТИЯ (КРЕСТИК) --- */
@@ -60,7 +63,6 @@
     background-color: #E7E9FC;
     border: 1px solid rgba(46, 47, 66, 0.4);
     padding: 0;
-    cursor: pointer;
 
     transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
             border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
@@ -71,7 +73,7 @@
 .modal-close-btn:focus {
     background-color: #404bbf;
     /* Колір акценту при наведенні */
-    border-color: transparent;
+    border-color: #404bbf;
 }
 
 /*Додавання стилів для іконки закриття*/
@@ -91,24 +93,30 @@
 .modal-title {
     /* Додайте цей селектор, якщо клас збігається, або використайте ваш клас для цього тексту */
     margin-bottom: 16px;
+
+    color: #2e2f42;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 1.5;
+    letter-spacing: 0.02em;
+    text-align: center;
 }
 
 /* Контейнер полів форми з відступами 24px (згідно з Gap 24 у Figma) */
 .form-fields {
-    display: flex;
-    flex-direction: column;
-    /*1. Вертикальні відступи між полями (Name-Phone, Phone-Email, Email-Comment)*/
-    gap: 8px;
-    margin-bottom: 16px;
-    width: 100%;
+    
+    margin-bottom: 8px;
 }
-.form-field-wrapper {
+/*.form-field-wrapper {
     display: flex;
     flex-direction: column;
     gap: 4px;
-    /* Відступ між лейблом та інпутом */
-}
+    /* Відступ між лейблом та інпутом
+}*/
 .form-label {
+    display: block;
+    margin-bottom: 4px;
+
     font-size: 12px;
     line-height: 1.17;
     letter-spacing: 0.04em;
@@ -119,19 +127,24 @@
     position: relative;
 }
 .form-input {
+    display: block;
+
     /* Ваші поточні стилі (ширина, висота, бордер тощо) */
     width: 100%;
     height: 40px;
     border: 1px solid rgba(46, 47, 66, 0.4);
     border-radius: 4px;
-    padding-left: 38px;
-    /* Місце для іконки зліва */
-    outline: transparent;
+    padding: 0 38px;
+    
+    outline: none;
 
     background-color: transparent;
         /* або #fcfcfc, щоб зливалося з модалкою */
+
+    color: #2e2f42;
+    font-size: 16px;
+
     line-height: 1.5;
-        /* Додано */
     letter-spacing: 0.02em;
 /* Додаємо transition для border-color та color (для іконки) */
     transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
@@ -146,7 +159,10 @@
     left: 16px;
     top: 50%;
     transform: translateY(-50%);
+
     color: #2e2f42;
+    pointer-events: none;
+
     transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .form-input:focus+.input-icon {
@@ -154,6 +170,8 @@
 }
 /* Текстове поле має бути з фіксованим розміром (ТЗ) */
 .form-textarea {
+    display: block;
+
     width: 100%;
     height: 120px;
     font-size: 12px;
@@ -162,7 +180,11 @@
     border: 1px solid rgba(46, 47, 66, 0.4);
     border-radius: 4px;
     padding: 8px 16px;
-    outline: transparent;
+
+    outline: none;
+    background-color: transparent;
+    color: #434455;
+
     resize: none;
     /* Заборона зміни розміру користувачем */
     transition: border-color 250ms cubic-bezier(0.4, 0, 0, 1);
@@ -178,6 +200,8 @@
     margin-bottom: 24px;
 }
 .checkbox-label {
+    cursor: pointer;
+
     font-size: 12px;
     line-height: 1.17;
     letter-spacing: 0.04em;
@@ -188,8 +212,8 @@
 }
 /* 1. Базовий стан кастомного квадратика, коли чекбокс НЕ вибрано */
 .custom-checkbox {
-    width: 16px;
-    height: 16px;
+    flex: 0 0 16px;
+
     border: 1px solid rgba(46, 47, 66, 0.4);
     border-radius: 2px;
     display: inline-flex;
@@ -220,6 +244,9 @@
     min-width: 169px;
     height: 56px;
     margin: 0 auto;
+
+    padding: 16px 32px;
+
     font-weight: 500;
     font-size: 16px;
     line-height: 1.5;
@@ -227,7 +254,7 @@
     color: #ffffff;
     background-color: #4d5ae5;
     /* Колір IRIS з макета */
-    border: none;
+    border: 0;
     border-radius: 4px;
     cursor: pointer;
     transition: background-color 250ms cubic-bezier(0.4, 0, 0, 1);
@@ -252,4 +279,11 @@
     clip-path: inset(100%);
     clip: rect(0 0 0 0);
     overflow: hidden;
+}
+
+@media screen and (min-width: 768px) {
+    .modal {
+        min-height: 584px;
+        padding: 72px 24px 24px;
+    }
 }
