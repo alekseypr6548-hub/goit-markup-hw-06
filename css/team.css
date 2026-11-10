@@ -94,7 +94,7 @@
     .team-list {
     max-width: 552px;
     margin: 0 auto;
-    row-gap: 64px 24px;
+    gap: 64px 24px;
         /* Вертикальний 64px, горизонтальний 24px */
     }
 }

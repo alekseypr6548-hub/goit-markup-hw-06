@@ -141,6 +141,8 @@
     .address-list {
         display: flex;
         gap: 40px;
+        flex-direction: row;
+            /* ДОДАНО: контакти тепер стають горизонтально в рядок */
     }
     .address-link {
         font-size: 16px;

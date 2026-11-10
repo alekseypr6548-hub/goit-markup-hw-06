@@ -73,7 +73,7 @@
 
 /*===ШЕСТЬ МЕДИА ЗАПРОСОВ ДЛЯ ОДОБТАЦИИ ФОНОВОГО ИЗОБРАЖЕНИЯ===*/
 
-@media (min-resolution: 2dppx) (min-resolution: 192dpi) {
+@media (min-resolution: 2dppx), (min-resolution: 192dpi) {
     .hero-section {
         background-image: linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)),
                 /* Верхня точка градієнта */
