@@ -10,7 +10,7 @@
     background-image: linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)),
         /* Верхня точка градієнта */
         /* Нижня точка градієнта */
-        url('../images/hero-bg.mob.jpg');
+        url('../images/hero/hero-bg.mob.jpg');
     /* Шлях до вашої картинки */
 
     /* Центруємо та масштабуємо фон */
@@ -78,7 +78,7 @@
         background-image: linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)),
                 /* Верхня точка градієнта */
                 /* Нижня точка градієнта */
-                url('../images/hero-bg.mob2x.jpg');
+                url('../images/hero/hero-bg.mob2x.jpg');
             /* Шлях до вашої картинки */
     }
 }
@@ -88,7 +88,7 @@
         background-image: linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)),
                 /* Верхня точка градієнта */
                 /* Нижня точка градієнта */
-                url('../images/hero-bg.tab.jpg');
+                url('../images/hero/hero-bg.tab.jpg');
             /* Шлях до вашої картинки */
     }
 
@@ -98,7 +98,7 @@
         background-image: linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)),
             /* Верхня точка градієнта */
             /* Нижня точка градієнта */
-            url('../images/hero-bg.tab2x.jpg');
+            url('../images/hero/hero-bg.tab2x.jpg');
         /* Шлях до вашої картинки */
     }
 }
@@ -108,7 +108,7 @@
             background-image: linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)),
                 /* Верхня точка градієнта */
                 /* Нижня точка градієнта */
-                url('../images/hero-bg.des.jpg');
+                url('../images/hero/hero-bg.des.jpg');
             /* Шлях до вашої картинки */
         }
 }
@@ -117,7 +117,7 @@
         background-image: linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)),
             /* Верхня точка градієнта */
             /* Нижня точка градієнта */
-            url('../images/hero-bg.des2x.jpg');
+            url('../images/hero/hero-bg.des2x.jpg');
         /* Шлях до вашої картинки */
     }
 }
