@@ -18,7 +18,7 @@
     
     justify-content: center;
     
-    gap: 74px 28px;
+    gap: 72px 28px;
 }
 .team-item {
     flex: 0 0 264px;/*никогда не будет растягиваться;никогда не будет сжиматься; базовая (начальная) ширина элемента 264px*/
@@ -94,7 +94,8 @@
     .team-list {
     max-width: 552px;
     margin: 0 auto;
-    row-gap: 64px;
+    row-gap: 64px 24px;
+        /* Вертикальний 64px, горизонтальний 24px */
     }
 }
 
@@ -103,7 +104,9 @@
         padding: 120px 0;
         }
     .team-list {
-        display: flex;
+         max-width: none;
+            /* Скасовує планшетне обмеження ширини */
         gap: 24px;
-        }
+            /* Встановлює однаковий відступ 24px між усіма 4 картками */
+    }
 }

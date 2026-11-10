@@ -12,6 +12,8 @@
 }
 .footer-left {
     width: 264px;
+    text-align: center;
+        /* Додано для центрування тексту на мобільному */
 }
 .footer-logo {
     
@@ -34,10 +36,11 @@
     letter-spacing: 0.02em;
     color: #F4F4FD;
 }
-.footer-social {
+.footer-socials {
     width: 100%;
 }
-.footer-socials-title.footer-subscribe-title {
+.footer-socials-title,
+.footer-subscribe-title {
     font-weight: 500;
     font-size: 16px;
     line-height: 1.5;
@@ -53,7 +56,7 @@
     /* Расстояние между самими синими кружками в футере */
     justify-content: center;
 }
-.footer-social-item {
+.footer-socials-item {
     width: 40px;
     height: 40px;
 }
@@ -197,16 +200,18 @@
         gap: 0;
         padding: 0 15px;
   }
-        .footer-info {
-            margin-right: 120px;
-        }
-    
-        .footer-socials {
-            margin-right: 83px;
-        }
-        .footer-subscribe {
-            width: auto;
-            margin-left: auto;
-  }
+    .footer-left {
+        margin-right: 120px;
+        /* Обов'язковий горизонтальний відступ */
+    }
+
+    .footer-socials {
+        margin-right: auto;
+        /* Штовхає блок підписки до правого краю */
+    }
+
+    .subscribe {
+        width: auto;
+    }
 
 }

@@ -34,11 +34,12 @@
 .modal {
     position: relative;
 
-    max-width: 100%;
+    max-width: 288px;
     margin: auto;
 
-    /* Тимчасові розміри (підкоригуйте під точні розміри білого прямокутника) */
-    width: 408px;
+/* ЗМІНЕНО: тепер модалка займає майже весь екран на малих смартфонах, але не більше 288px */
+    width: calc(100% - 32px);
+
     min-height: 623px;
     background-color: #FCFCFC;
     border-radius: 4px;
@@ -283,6 +284,10 @@
 
 @media screen and (min-width: 768px) {
     .modal {
+    /* ДОДАНО: повертаємо початкову ширину модалки з макета для великих екранів */
+        width: 408px;
+        max-width: 100%;
+
         min-height: 584px;
         padding: 72px 24px 24px;
     }

@@ -90,6 +90,9 @@
   margin-top: auto;
   padding-top: 48px;
 }
+.mobile-menu-address {
+  font-style: normal;
+}
 
 .mobile-menu-address-list {
   display: flex;
